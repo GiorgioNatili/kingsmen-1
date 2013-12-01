@@ -1,0 +1,23 @@
+.aPost h3 {
+	float: left;
+}
+.aPost .newsDate {
+	float: right;
+	line-height: 42px;
+	font-size: 12px;
+}
+.postContent {
+	clear: both;
+}
+.postImg {
+	float: left;
+		width: 150px;
+	height: 120px;
+	border: solid 2px grey;
+}
+.postText {
+	padding-left: 170px
+}
+.aPost {
+	margin-bottom: 20px
+}

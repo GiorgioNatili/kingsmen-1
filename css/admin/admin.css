@@ -1,0 +1,234 @@
+body {
+	background: #343434;
+	padding:20px;
+	font:12px  "Lucida Grande", tahoma, verdana;
+}
+a {
+	color:#395A90	
+}
+a:hover{
+	text-decoration:underline;
+}
+.grey {
+	color:#999	
+}
+h1 {
+	text-align:center;
+	margin:0 0 30px 0
+}
+.centered {
+	margin: 0 auto;
+	width: 600px;
+	padding: 40px;
+	background: #fff;
+	border: 1px solid gray;
+	min-height:500px;
+}
+.logo {
+	display:block;
+	background:url(../img/menu.png) no-repeat -163px -115px;
+	width:146px;
+	height:112px;
+	margin-bottom:16px;
+	margin:0 auto 20px auto;
+}
+.line {
+	border-bottom:solid 1px #999;
+	margin-bottom:10px;
+}
+/*home*/
+#centeredmenu {
+   float:left;
+   width:100%;
+   background:#fff;
+   border-bottom:4px solid #000;
+   overflow:hidden;
+   position:relative;
+   margin-bottom:20px
+}
+#centeredmenu ul {
+   clear:left;
+   float:left;
+   list-style:none;
+   margin:0;
+   padding:0;
+   position:relative;
+   left:50%;
+   text-align:center;
+}
+#centeredmenu ul li {
+   display:block;
+   float:left;
+   list-style:none;
+   margin:0;
+   padding:0;
+   position:relative;
+   right:50%;
+}
+#centeredmenu ul li a {
+   display:block;
+   margin:0 0 0 1px;
+   padding:3px 10px;
+   background:#ddd;
+   color:#000;
+   text-decoration:none;
+   line-height:1.3em;
+}
+#centeredmenu ul li a:hover {
+   background:#369;
+   color:#fff;
+}
+#centeredmenu ul li a.active,
+#centeredmenu ul li a.active:hover {
+   color:#fff;
+   background:#000;
+   font-weight:bold;
+}
+/*about*/
+.editableText:hover {
+	outline: 1px dashed grey;
+}
+.editableToolbar:hover + * {
+	outline: 1px dashed grey;
+}
+.editableToolbar {
+}
+.editableToolbar a{
+    display: block;
+    width: 17px;
+    height: 15px;
+    float: left;
+    margin: 2px;
+}
+.editableToolbar .edit {	
+	background: url("/img/icons.png");
+}
+.editableToolbar .save {
+    background: url("/img/icons.png") -16px 0;
+}
+.editableToolbar .cancel {
+    background: url("/img/icons.png") 25px 0;
+}
+/*news*/
+#my_form {
+	margin-bottom:20px;
+	position:relative
+}
+#my_form input[type="text"] {
+	width:150px;
+	border: solid 1px #36C5DE;
+	padding:2px 0 2px 3px;
+}
+#my_form textarea {
+	border: solid 1px #36C5DE;
+	padding:0 0 0 3px;
+}
+#my_form .td1 {
+	width:100px	
+}
+#my_form td {
+	padding:3px 0	
+}
+.submit {
+	border-color:#EEEEEE #DEDEDE #DEDEDE #EEEEEE;
+	border-style:solid;
+	border-width:1px;
+	display:block;
+	padding:4px 6px;
+	cursor:pointer
+}
+.del, .add {
+	margin-left:30px;	
+}
+#upload_button, #finish_button {
+	background-color:#DFF4FF;
+	border:1px solid #C2E1EF;
+	color:#336699;
+	cursor:pointer;
+	display:block;
+	font-size:100%;
+	font-weight:bold;
+	line-height:130%;
+	padding:5px 10px 6px 7px;
+	text-align:center;
+}
+#finish_button{
+	background-color:#E6EFC2;
+	border:1px solid #C6D880;
+	color:#529214;
+}
+#error{
+	background:#FBE3E4 none repeat scroll 0 0;
+	border:1px solid #FBC2C4;
+	color:#D12F19;
+	display:none;
+	padding-left:20px;
+	margin-bottom:20px;
+}
+#error li {
+	padding:4px 0	
+}
+.img {
+	margin-right:10px	
+}
+/*news list*/
+.newslist h3 {
+	margin-bottom:10px	
+}
+.news_tbl {
+	margin-left:10px
+}
+.news_tbl .td1 {
+	padding:0 0 25px 10px
+}
+.news_tbl .td2 {
+	padding:0 0 0 10px
+}
+
+/*stat*/
+.stat_tbl {
+	width:100%;	
+}
+.stat_tbl td {
+	padding:5px 10px 5px 0;
+}
+.stat_tbl .td1 {
+	width:150px
+}
+.stat_tbl .td2 {
+	padding:
+}
+/*modal*/
+.modal {
+	display:none;
+	position:absolute;
+	z-index:99999;
+	background: rgba(0,0,0,0.8);
+	background:url(/img/modalbg.png)\9;
+	border-radius: 3px 3px;
+	min-width:240px;
+	color:#FFF;
+	
+}
+.modal a{
+	color: #A4BAE3
+}
+.modal .modal_content {
+	padding:20px
+}
+.modal .e {
+	color:#FF0000;
+}
+.modal .modal_header {
+	padding:8px 5px 0 20px;
+	margin-bottom:5px;
+	font-weight: bold;
+}
+.modal .modal_close{
+	position: absolute;
+	top: 2px;
+	right: 5px;
+	cursor:pointer;
+	padding: 4px;	
+}
+/*end modal*/

@@ -1,0 +1,24 @@
+.album ul {
+	
+
+}
+.album ul .projectName {
+	margin: 4px 0 4px 4px;
+	text-decoration: none;
+	color: #fff;
+	font-size: 14px
+}
+
+.album ul li *{
+	display: block;
+}
+.album ul li {
+	margin: 0 8px 8px 0;
+	width: 219px;
+	border: 1px solid #2A2A2A;
+	float: left;
+}
+.album ul li span {
+	padding: 4px 4px 4px 4px;
+	font-size: 11px
+}

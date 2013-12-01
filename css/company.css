@@ -1,0 +1,19 @@
+.content ul {
+	margin: -10px 0 20px;
+}
+.content ul li {
+    list-style-image: url("../img/list_arrow.png");
+    list-style-position: inside;
+    margin-top: 5px;
+}
+.content ul ul {
+    margin-top: 5px;
+}
+.content ul li li {
+    list-style-type: none;
+    margin-left: -35px;
+}
+.content ul li ul li {
+    list-style-image: url("../img/list_second_arrow.png");
+    margin-left: 35px;
+}

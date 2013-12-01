@@ -1,0 +1,37 @@
+.pubTable {
+	width: 700px;
+
+}
+.downPub {
+	background: url(../img/download_arrow.png) no-repeat 60px center;
+
+	display: block;
+	text-decoration: none;
+	padding-right: 30px
+}
+.pubTable td {
+	padding: 6px;
+	background: #161616;
+	height: 20px;
+	line-height: 20px;
+	border: solid 1px #101010;
+}
+.pubTable .td1 {
+	text-align: center;
+	width: 100px
+}
+.pubTable .td3 {
+	text-align: center;
+	width:50px
+}
+.pubTable .td2 {
+	width: auto;
+}
+.pubTable a {
+	text-decoration: none;
+	margin-left: 20px;
+	color: #fff
+}
+.pubTable a:hover{
+	color: #931E1C
+}
