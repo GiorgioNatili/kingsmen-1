@@ -46,14 +46,10 @@ $(function(){
 			cancelButton: '.cancel',
 			minWidth: 110,
 			minHeight: 86,
-			maxSize: 10000,
-			maxLength: 12,
-			allowedType: 'jpg|png|jpeg|gif',
+			maxSize: 100000,
+			maxLength: 100,
 			onComplete: function(name, size, index, response){
-				var i = response;
-				if(i.status=='success'){
-					$.modal('success');
-				}
+
 			}
 		});
 	
@@ -75,7 +71,7 @@ $(function(){
 					<td class="td1"><label for="nde">Project type</label></td>
 					<td class="td2">
 						<select name="type" id="nde" size="1">
-							<option value="interior">Interior</option>
+							<option value="interior" selected="selected">Interior</option>
 							<option value="event">Event</option>
 							<option value="exhibition">Exhibition</option>
 						</select>
@@ -99,4 +95,5 @@ $(function(){
 	<ul id="files"></ul>
 
 	<br><br><br>
+	<div class="clear"></div>
 

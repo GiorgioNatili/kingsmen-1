@@ -181,7 +181,8 @@ body {background: #101010}
 	color: #fff;
 	text-decoration: none;
 	margin: 0 7px 0 7px;
-    font-family: Quicksand
+    font-family: Quicksand;
+    color: #808080;
 }
 .contactIcons{
 	height: 30px;

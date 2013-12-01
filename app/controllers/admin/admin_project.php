@@ -40,7 +40,7 @@ class Admin_project extends CI_Controller {
 		$path =	FCPATH.'photo/pro/';
 
 		// get the original name, size and type
-		$name = $_SERVER['HTTP_X_FILE_NAME']; // myphoto.jpg
+		$name = str_replace(' ','_',$_SERVER['HTTP_X_FILE_NAME']); // myphoto.jpg // replace white space with "_"
 		$name = preg_replace('/\.[^.]*$/', '', $name); // remove extension from file name 
 		$size = $_SERVER['HTTP_X_FILE_SIZE'];
 		$type = strtolower(substr(strrchr($_SERVER['HTTP_X_FILE_NAME'], '.'), 1));
@@ -49,20 +49,19 @@ class Admin_project extends CI_Controller {
 		$file = file_get_contents("php://input");
 
 		// prepare new name for upload image
-		$name =  $name.'d1.'.$type;
+		$full =  $name.'d1.'.$type;
 		$medium = $name.'d2.'.$type;
 		$small = $name.'d3.'.$type;
 
-		if(!file_put_contents($path.$name, $file)){
-			$array = array('status'=>'can not upload '.$name.' to server');
-		}
+		file_put_contents($path.$full, $file);
+			
 
 		//resize, scale or crop
-		$this->image->scale_to_bigger(220,146, $path, $name, $medium);
-		$this->image->scale_to_bigger(90,60, $path, $name, $small);
+		// $this->image->scale_to_bigger(220,146, $path, $full, $medium);
+		// $this->image->scale_to_bigger(90,60, $path, $full, $small);
 
 		// save the name and id of the project to project photo table
-		$input =  array(	'full' => $name, 
+		$input =  array(	'full' => $full, 
 							'medium'=>$medium,
 							'small' =>$small,
 							'project_id'=> get_cookie('projectid')// this cookie is set during process form
@@ -71,7 +70,7 @@ class Admin_project extends CI_Controller {
 		$this->db->insert('project_photo', $input);
 		if($this->db->affected_rows()>0){
 			$array = array( 'status'	=> 'success',
-							'name'		=> $name,
+							'name'		=> $full,
 							'medium'	=> $medium,
 							'small'		=> $small,
 							'image_id'	=> $this->db->insert_id());

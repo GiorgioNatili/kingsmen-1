@@ -86,8 +86,19 @@
 					}
 					// loaded should be equal total by now
 					loaded = total;
-					response = JSON.parse(xhr.responseText);
-					o.onComplete.call(this, name, size, index, response);
+
+					// response = JSON.parse(xhr.responseText);   // commented out for testing
+					// o.onComplete.call(this, name, size, index, response); // commented out for testing
+
+
+					// check if response is json object
+					response = jQuery.parseJSON(xhr.responseText);
+					if (typeof response =='object'){
+						o.onComplete.call(this, name, size, index, response);
+					}else{
+						alert(xhr.responseText);
+					}
+					
 				}, false);
 
 				if(cancel.length){
@@ -100,7 +111,8 @@
 				xhr.open("post", o.url, true);
 				
 				// Set appropriate headers
-				//xhr.setRequestHeader("Content-Type", "application/json-rpc");
+				// xhr.setRequestHeader("Cache-Control", "no-cache");
+    // 			xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
 				xhr.setRequestHeader("Content-Type", "multipart/form-data"); 
 				xhr.setRequestHeader("X-File-Name", file.name);
 				xhr.setRequestHeader("X-File-Size", file.size);

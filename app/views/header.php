@@ -22,7 +22,7 @@
 						<ul>
 							<li><a href="<?=site_url('about')?>">ABOUT US</a></li>
 							<li><a href="<?=site_url('vision_mission')?>">VISION & MISSION</a></li>
-							<li><a href="<?=site_url('global_presence')?>">GLOBAL PRESENCE</a></li>
+							
 						</ul>
 					</div>
 					<div class="sl">
