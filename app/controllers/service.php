@@ -60,6 +60,8 @@ class Service extends CI_Controller {
 											LEFT JOIN project_photo b
 											ON b.project_id = a.id
 											WHERE a.id = '{$id}'");
+
+		$this->load->view('service_id_view',$data);
 	}
 }
 ?>

@@ -92,11 +92,7 @@ Basic html
 			var top = (($(window).height() - $('.modal').outerHeight())/2) * (2/5) + $(document).scrollTop();	
 			
 			$('.modal').css({'top':top+'px', 'left':left+'px'}).fadeIn(80);
-			$('.modal_close').live("mouseup", function(e){
-				$(e.target).closest('.modal').fadeOut(80,function(){ 
-					$(this).remove();
-				});
-			});
+
 			if(o.type == undefined) {
 				$(document).mouseup(function(e){
 					if(!$(e.target).is('.modal, .modal *')){

@@ -203,7 +203,7 @@ body {background: #101010}
 .phone {
 	width: 22px;
 	height: 11px;
-	background:url(../img/t/phone.png) no-repeat center center;
+	background:url(../img/phone.png) no-repeat center center;
 	cursor: pointer;
 	position: absolute !important;
 	left: 80px
@@ -211,11 +211,11 @@ body {background: #101010}
 .fax {
 	width: 18px;
 	height: 16px;
-	background: url(../img//t/fax.png) no-repeat center center;
+	background: url(../img//fax.png) no-repeat center center;
 	cursor: pointer;
 	position: absolute !important;
 	right: 20px;
-	top: 16px;
+	top: 15px;
 }
 
 /*about us page*/
@@ -231,4 +231,41 @@ body {background: #101010}
     height: 250px;
     background: url(../photo/publication_poster.jpg) no-repeat;
 }
+
+/*modal css*/
+.modal {
+    display:none;
+    position:absolute;
+    z-index:99999;
+    background: rgba(0,0,0,0.8);
+    border-radius: 3px 3px;
+    min-width:140px;
+    color:#FFF;
+    
+}
+.modal a{
+    color: #A4BAE3
+}
+.modal .modal_content {
+    padding:20px;
+    text-align: center;
+    color: #cc2317;
+    font-size: 14px
+}
+.modal .e {
+    color:#FF0000;
+}
+.modal .modal_header {
+    padding:8px 5px 0 20px;
+    margin-bottom:5px;
+    font-weight: bold;
+}
+.modal .modal_close{
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    cursor:pointer;
+    padding: 4px;   
+}
+/*end modal css*/
 

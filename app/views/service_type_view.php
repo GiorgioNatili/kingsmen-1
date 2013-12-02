@@ -1,6 +1,7 @@
+</head>
+<!-- this view doesn't load the standard header file. only load doctype that's why it needs to close doctype -->
 <div class="">
 	<h2><?=$page?></h2>
-
 </div>
 <div class="album">
 	<ul class="projectList">

@@ -9,14 +9,11 @@
 				$(this).children('ul').stop(true,true).fadeOut(300);
 		});
 
-		$('.email').click(function(){
-			$.modal('info@kingsmen.com.vn');
+		$('.phone').click(function(){
+			$.modal('+84 (08) 3810 7709');
 		});
-		$('phone').click(function(){
-			$.modal('');
-		});
-		$('phone').click(function(){
-			$.modal('');
+		$('.fax').click(function(){
+			$.modal('+84 (08) 3810 7708');
 		});
 	});
 </script>
