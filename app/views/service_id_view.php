@@ -39,13 +39,16 @@ $(function(){
 </head>
 <body>
 <a class="goback" href="#" onclick="history.go(-1);">Back To Previous Page</a>
-<a href="" class="ptype">Interior</a>
+<a href="" class="ptype">
+<span class="sp2"><?=$query->row()->name?></span>
+<span class="sp1"><?=$query->row()->type?></span>
+</a>
+<span class="thered"></span>
 <div class="mainImg"><img class="showing" src="<?=site_url('photo/pro/'.$query->row()->full)?>"></div>
 <div class="thumbNav">
 	<?php foreach($query->result() as $row):?>
 			<span><img id="" src="<?=site_url('photo/pro/'.$row->small)?>"></span>
 	<?php endforeach;?>
-	
 </div>
 </body>
 </html>

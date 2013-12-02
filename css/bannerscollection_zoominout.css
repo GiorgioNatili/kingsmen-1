@@ -183,16 +183,22 @@ skins available:
 
 
 
+#myH1
+{
 
+}
 
 
 /***OpportuneFullScreenTexts***/
 
 .textElement11_opportuneFullScreen {
-	font: bold 68px 'Droid Sans', Verdana, Helvetica, sans-serif;
+	font: bold 64px 'Droid Sans', Verdana, Helvetica, sans-serif;
 	text-transform:uppercase;
 	padding:6px 13px 6px 13px;
-	color:#000000;
+	color:#FFF;
+	text-shadow:1px 1px #64666b;
+
+	/*text-shadow: 1px 1px 5px rgba(150, 150, 150, 1);*/
 }
 .textElement12_opportuneFullScreen {
 	font: bold 30px 'Droid Sans', Verdana, Helvetica, sans-serif;
@@ -277,169 +283,6 @@ skins available:
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/***468x60***/
-
-.textElement11_468x60 {
-	font: bold 24px 'Droid Sans', Verdana, Helvetica, sans-serif;
-	line-height:34px;
-	text-transform:uppercase;
-	color:#000000;
-}
-.textElement12_468x60 {
-	font: bold 16px 'Droid Sans', Verdana, Helvetica, sans-serif;
-	line-height:27px;
-	text-transform:uppercase;
-	color:#000000;
-}
-
-.textElement12_468x60 a {
-	text-transform:uppercase;
-	color:#ff6c00;
-	text-decoration:none;
-}
-
-.textElement12_468x60 a:hover {
-	color:#FF0000;
-}
-
-
-.textElement21_468x60 {
-	font: bold 18px 'Droid Sans', Verdana, Helvetica, sans-serif;
-	line-height:22px;
-	color:#FFFFFF;
-}
-
-.textElement21_468x60 a {
-	text-transform:uppercase;
-	color:#ff6c00;
-	text-decoration:none;
-}
-
-.textElement21_468x60 a:hover {
-	color:#FF0000;
-}
-
-.textElement31_468x60 {
-	font: bold 11px 'Droid Sans', Verdana, Helvetica, sans-serif;
-	line-height:21px;
-	color:#FFFFFF;
-}
-.textElement32_468x60 {
-	font: bold 22px 'Droid Sans', Verdana, Helvetica, sans-serif;
-	line-height:26px;
-	text-transform:uppercase;
-	color:#FFFFFF;
-}
-
-
-
-/****MiniGallery1***/
-
-
-.textElement11_MiniGallery1 {
-	font: bold 26px 'Lato', sans-serif;
-	line-height:32px;
-	color:#FFFFFF;
-}
-
-.textElement12_MiniGallery1 {
-	font: bold 16px 'Droid Sans', Verdana, Helvetica, sans-serif;
-	line-height:23px;
-	color:#FFFFFF;
-}
-
-.textElement12_MiniGallery1 a {
-	text-transform:uppercase;
-	color:#ff6c00;
-	text-decoration:none;
-}
-
-.textElement12_MiniGallery1 a:hover {
-	text-decoration: underline;
-}
-
-.textElement31_MiniGallery1 {
-	font: bold 32px 'Droid Sans', Verdana, Helvetica, sans-serif;
-	line-height: 37px;
-	text-transform:uppercase;
-	color:#FFFFFF;
-}
-.textElement32_MiniGallery1 {
-	font: bold 14px 'Droid Sans', Verdana, Helvetica, sans-serif;
-	line-height: 22px
-	text-transform:uppercase;
-	color:#FFFFFF;
-}
-
-
-
-
-
-
-.textElement51_MiniGallery1 {
-	font: bold 22px 'Droid Sans', Verdana, Helvetica, sans-serif;
-	line-height: 27px;
-	text-transform:uppercase;
-	color:#ffffff;
-}
-
-
-
-
-
-
-/***336x280***/
-
-.textElement11_336x280 {
-	font: bold 34px 'Droid Sans', Verdana, Helvetica, sans-serif;
-	line-height:44px;
-	text-transform:uppercase;
-	color:#000000;
-}
-.textElement12_336x280 {
-	font: bold 22px 'Droid Sans', Verdana, Helvetica, sans-serif;
-	line-height:27px;
-	text-transform:uppercase;
-	color:#000000;
-}
-
-.textElement12_336x280 a {
-	text-transform:uppercase;
-	color:#ff6c00;
-	text-decoration:none;
-}
-
-.textElement12_336x280 a:hover {
-	color:#FF0000;
-}
-
-
-.textElement21_336x280 {
-	font:16px 'Droid Sans', Verdana, Helvetica, sans-serif;
-	line-height:25px;
-	color:#FFFFFF;
-}
-.textElement22_336x280 {
-	font: bold 18px 'Droid Sans', Verdana, Helvetica, sans-serif;
-	line-height:22px;
-	text-transform:uppercase;
-	color:#FFFFFF;
-}
 
 
 

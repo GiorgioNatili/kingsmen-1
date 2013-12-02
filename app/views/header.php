@@ -23,7 +23,7 @@
 	<?php
 	if($this->uri->segment(1)=='home')
 	{
-		$this->load->view('home');	
+		$this->load->view('home_view');	
 	}?>
 
 	<div id="page" class="ma">

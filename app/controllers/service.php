@@ -61,6 +61,8 @@ class Service extends CI_Controller {
 											ON b.project_id = a.id
 											WHERE a.id = '{$id}'");
 
+		
+
 		$this->load->view('service_id_view',$data);
 	}
 }

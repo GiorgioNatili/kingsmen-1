@@ -1,6 +1,5 @@
 * {padding:0;margin:0;}
 html {height:100%;overflow-y:scroll;}
-body { font-family: arial, tahoma ; font-size:13px; height:100%; }
 a{text-decoration:none; outline:none; color:/*#0066CC*//*#3399CC*/ #2058B5}
 a:hover {text-decoration:underline; cursor:pointer}
 img{border:0}

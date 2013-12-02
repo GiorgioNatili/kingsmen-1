@@ -89,7 +89,7 @@ Basic html
 			}
 			
 			var left = ($(window).width() - $('.modal').outerWidth())/2 + $(document).scrollLeft();
-			var top = (($(window).height() - $('.modal').outerHeight())/2) * (2/5) + $(document).scrollTop();	
+			var top = (($(window).height() - $('.modal').outerHeight())/2) * (2/2) + $(document).scrollTop();	
 			
 			$('.modal').css({'top':top+'px', 'left':left+'px'}).fadeIn(80);
 

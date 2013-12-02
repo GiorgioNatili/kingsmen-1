@@ -8,7 +8,7 @@
 			<a href="">Lastest Projects</a>
 			<a href="<?=site_url('photo/Kingsmen_furniture.pdf')?>" download="Kingsmen_furniture.pdf">Rental Services</a>
 			<a href="">Certificates</a>
-			<a href="">Download Brochure</a>
+			<a href="<?=site_url('photo/Kingsmen_brochure.pdf')?>" download="Kingsmen_brochure.pdf">Download Brochure</a>
 		</div>
 		<div class="lang">
 			<a href="">vietnamese</a>
