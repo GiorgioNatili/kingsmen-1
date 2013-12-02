@@ -19,8 +19,14 @@
 </script>
 </head>
 <body class="">
+
+	<?php
+	if($this->uri->segment(1)=='home')
+	{
+		$this->load->view('home');	
+	}?>
+
 	<div id="page" class="ma">
-		
 			<div class="nav">
 				<a class="logo" href="<?=site_url('home')?>"><h1>logo</h1></a>
 				<div class="menu">
