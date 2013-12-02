@@ -1,0 +1,14 @@
+--- 
+applications: 
+  .: 
+    mem: 128M
+    url: ${name}.${target-base}
+    infra: ap-aws
+    instances: 1
+    framework: 
+      info: 
+        mem: 128M
+        description: PHP Application
+        exec: 
+      name: php
+    name: kingsmen

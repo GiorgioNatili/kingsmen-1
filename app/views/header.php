@@ -1,4 +1,4 @@
-
+<script type="text/javascript" src="<?=site_url('js/modal.js')?>"></script>
 <script type="text/javascript">
 	$(function(){
 
@@ -8,6 +8,16 @@
 		}, function(){
 				$(this).children('ul').stop(true,true).fadeOut(300);
 		});
+
+		$('.email').click(function(){
+			$.modal('info@kingsmen.com.vn');
+		});
+		$('phone').click(function(){
+			$.modal('');
+		});
+		$('phone').click(function(){
+			$.modal('');
+		});
 	});
 </script>
 </head>
@@ -15,7 +25,7 @@
 	<div id="page" class="ma">
 		
 			<div class="nav">
-				<a class="logo" href=""><h1>logo</h1></a>
+				<a class="logo" href="<?=site_url('home')?>"><h1>logo</h1></a>
 				<div class="menu">
 					<div class="sl">
 						<a href="">COMPANY</a>
@@ -28,9 +38,9 @@
 					<div class="sl">
 						<a href="">SERVICES</a>
 						<ul>
-							<li><a href="<?=site_url('interior')?>">INTERIOR</a></li>
-							<li><a href="<?=site_url('exhibition')?>">EXHBITION</a></li>
-							<li><a href="<?=site_url('event')?>">EVENT</a></li>
+							<li><a href="<?=site_url('service/interior')?>">INTERIOR</a></li>
+							<li><a href="<?=site_url('service/exhibition')?>">EXHBITION</a></li>
+							<li><a href="<?=site_url('service/event')?>">EVENT</a></li>
 						</ul>
 					</div>
 					<div class="sl">

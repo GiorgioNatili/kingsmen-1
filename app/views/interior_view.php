@@ -7,8 +7,8 @@
 		<?php foreach($query->result() as $row):?>
 			<li>
 				<a class="projectName" href="<?=site_url('interior/item/'.$row->id)?>"><?=$row->name?></a>
-				<a href="<?=site_url('interior/item/'.$row->id)?>"><img src="photo/pro/t1.jpg"></a>
-				<span>Bien Hoa</span>
+				<a href="<?=site_url('interior/item/'.$row->id)?>"><img src="<?=site_url('photo/pro/'.$row->medium)?>"></a>
+				<span><?=$row->location?></span>
 			</li>
 		<?php endforeach;?>
 	</ul>

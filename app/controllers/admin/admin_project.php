@@ -12,7 +12,9 @@ class Admin_project extends CI_Controller {
 	function processform()
 	{
 
-		$input = array('name'=> $this->input->post('name'));
+		$input = array('name'=> $this->input->post('name'), 
+						'type'=>$this->input->post('type'),
+						'location'=>$this->input->post('location'));
 		$this->db->insert('project', $input);
 		
 		if(mysql_insert_id() > 0)
@@ -57,8 +59,9 @@ class Admin_project extends CI_Controller {
 			
 
 		//resize, scale or crop
-		// $this->image->scale_to_bigger(220,146, $path, $full, $medium);
-		// $this->image->scale_to_bigger(90,60, $path, $full, $small);
+		$this->image->scale_to_bigger(2500,1570, $path, $full, $full);
+		$this->image->scale_to_bigger(220,146, $path, $full, $medium);
+		$this->image->scale_to_bigger(90,60, $path, $full, $small);
 
 		// save the name and id of the project to project photo table
 		$input =  array(	'full' => $full, 

@@ -8,11 +8,13 @@ $(function(){
 								   
 		var name = $('#nti').val();
 		var type = $('#nde').val();
+		var location= $('#lc').val();
 
 		
 		$.post('<?= site_url('admin/admin_project/processform') ?>', 
 			 {	name: name,
-				type: type,	
+				type: type,
+				location:location
 			},
 		function(i){
 			if(i.insert == 'success'){
@@ -66,6 +68,10 @@ $(function(){
 				<tr>
 					<td class="td1"><label for="nti">Project Name</label></td>
 					<td class="td2"><input type="text" name="name" id="nti" /></td>
+				</tr>
+				<tr>
+					<td class="td1"><label for="plc">Project Location</label></td>
+					<td class="td2"><input type="text" name="location" id="plc" /></td>
 				</tr>
 				<tr>
 					<td class="td1"><label for="nde">Project type</label></td>

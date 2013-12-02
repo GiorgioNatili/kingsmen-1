@@ -1,10 +1,11 @@
 <script type="text/javascript">
 	
 jQuery.fn.labelize = function(){
-	$(this).live("click", function(){
+	parent = $(this).parent();
+	$(parent).on('click', $(this), function(){
 		$(this).next('input[type="text"],input[type="password"], select, textarea').focus();
 		$(this).prev('input[type="radio"],input[type="checkbox"]').click();
-	});
+	})
 }
 $(function(){
 	$('label').labelize();
@@ -31,9 +32,9 @@ $(function(){
 
 
 	<div class="right50">
-		<p>T (848) 3810 7709 / (848) 3810 7712-14<br>
-		F (848) 3810 7708<br>
-		E <a href="mailto:info@kingsmen.com.vn">info@kingsmen.com.vn</a><br>
+		<p>Tel +84 (08) 3810 7709<br>
+		Fax +84 (08) 3810 7708<br>
+		Email <a href="mailto:info@kingsmen.com.vn">info@kingsmen.com.vn</a><br>
 		Contact: Mr. Stephen Lim</p>	
 	</div>
 	<div class="clear"></div>

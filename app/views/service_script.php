@@ -1,1 +1,1 @@
-<link rel="stylesheet" type="text/css" href="css/service.css">
+<link rel="stylesheet" type="text/css" href="<?=site_url('css/service.css')?>">

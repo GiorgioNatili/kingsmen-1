@@ -4,9 +4,9 @@
 	<!-- end: #page -->
 	<div class="miniNavWrap">
 		<div class="miniNav">
-			<a href="">Factory Facilities</a>
+			<a href="<?=site_url('')?>">Factory Facilities</a>
 			<a href="">Lastest Projects</a>
-			<a href="">Rental Services</a>
+			<a href="<?=site_url('photo/Kingsmen_furniture.pdf')?>" download="Kingsmen_furniture.pdf">Rental Services</a>
 			<a href="">Certificates</a>
 			<a href="">Download Brochure</a>
 		</div>
