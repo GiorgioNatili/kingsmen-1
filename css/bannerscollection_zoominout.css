@@ -275,6 +275,7 @@ skins available:
 	font: bold 60px/1.0em 'Droid Sans', Verdana, Helvetica, sans-serif;
 	text-transform:uppercase;
 	color:#1c1c1c;
+	text-shadow:1px 1px #64666b;
 }
 .textElement62_opportuneFullScreen {
 	font: bold 25px 'Droid Sans', Verdana, Helvetica, sans-serif;

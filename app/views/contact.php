@@ -2,9 +2,9 @@
 	
 jQuery.fn.labelize = function(){
 	parent = $(this).parent();
-	$(parent).on('click', $(this), function(){
-		$(this).next('input[type="text"],input[type="password"], select, textarea').focus();
-		$(this).prev('input[type="radio"],input[type="checkbox"]').click();
+	$(parent).on('click', $(this), function(e){
+		$(e.target).next('input[type="text"],input[type="password"], select, textarea').focus();
+		$(e.target).prev('input[type="radio"],input[type="checkbox"]').click();
 	})
 }
 $(function(){

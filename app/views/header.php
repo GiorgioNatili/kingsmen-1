@@ -21,7 +21,7 @@
 <body class="">
 
 	<?php
-	if($this->uri->segment(1)=='home')
+	if($this->uri->segment(1)=='home' || $this->uri->segment(1)=== FALSE)
 	{
 		$this->load->view('home_view');	
 	}?>
@@ -31,7 +31,7 @@
 				<a class="logo" href="<?=site_url('home')?>"><h1>logo</h1></a>
 				<div class="menu">
 					<div class="sl">
-						<a href="">COMPANY</a>
+						<a>COMPANY</a>
 						<ul>
 							<li><a href="<?=site_url('about')?>">ABOUT US</a></li>
 							<li><a href="<?=site_url('vision_mission')?>">VISION & MISSION</a></li>
@@ -39,7 +39,7 @@
 						</ul>
 					</div>
 					<div class="sl">
-						<a href="">SERVICES</a>
+						<a>SERVICES</a>
 						<ul>
 							<li><a href="<?=site_url('service/interior')?>">INTERIOR</a></li>
 							<li><a href="<?=site_url('service/exhibition')?>">EXHBITION</a></li>
@@ -47,7 +47,7 @@
 						</ul>
 					</div>
 					<div class="sl">
-						<a href="">UPDATES</a>
+						<a>UPDATES</a>
 						<ul>
 							<li><a href="<?=site_url('publication')?>">PUBLICATION</a></li>
 							<li><a href="<?=site_url('news_update')?>">NEWS UPDATE</a></li>

@@ -63,25 +63,6 @@ body {background: #101010}
     font-weight: 200;
     padding: 10px 0;
 }
-/*.content ul {
-	margin: -10px 0 20px;
-}
-.content ul li {
-    list-style-image: url("../img/list_arrow.png");
-    list-style-position: inside;
-    margin-top: 5px;
-}
-.content ul ul {
-    margin-top: 5px;
-}
-.content ul li li {
-    list-style-type: none;
-    margin-left: -35px;
-}
-.content ul li ul li {
-    list-style-image: url("../img/list_second_arrow.png");
-    margin-left: 35px;
-}*/
 .content h2 {
 	font-size: 18px;
 	padding: 10px 0;
@@ -105,7 +86,7 @@ body {background: #101010}
     font-family: 'Quicksand', arial;
 }
 .menu{
-	background: url("../img/main_menu_bg.png") repeat-y scroll left top rgba(0, 0, 0, 0);
+	background: url("../img/main_menu_bg.png") repeat-y;
     width: 220px;
     padding: 180px 10px 1px 10px
 }
@@ -126,7 +107,7 @@ body {background: #101010}
     text-decoration: none;
 }
 .menu ul {
-	background: url("../img/main_menu_bg.png") repeat-y scroll left top rgba(0, 0, 0, 0);
+	background: url("../img/main_menu_bg.png") repeat-y;
 	position: absolute;
 	left: 210px;
 	width: 220px;
