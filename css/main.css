@@ -58,7 +58,7 @@ body {background: #101010}
 }
 .content h3{
 	clear: left;
-    font-family: 'Open Sans',Helvetica,Arial,sans-serif;
+    font-family: 'Quicksand',Helvetica,Arial,sans-serif;
     font-size: 15px;
     font-weight: 200;
     padding: 10px 0;
@@ -122,7 +122,8 @@ body {background: #101010}
 	border-bottom: 1px solid #343434;
 }
 .miniNavWrap {
-	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.8);
+	/*background: none repeat scroll 0 0 rgba(0, 0, 0, 0.8);*/
+    background: url(../img/mininav_bg.png);
     bottom: 0;
     color: #A3A3A3;
     height: 42px;
@@ -202,14 +203,14 @@ body {background: #101010}
 .about_poster {
     width: 700px;
     height: 250px;
-    background: url(../photo/about_poster.jpg) no-repeat;
+    background: url(../img/about_poster.jpg) no-repeat;
 }
 /*end baout us*/
 /*publication page*/
 .publication_poster {
     width: 700px;
     height: 250px;
-    background: url(../photo/publication_poster.jpg) no-repeat;
+    background: url(../img/publication_poster.jpg) no-repeat;
 }
 
 /*modal css*/
@@ -221,6 +222,7 @@ body {background: #101010}
     border-radius: 3px 3px;
     min-width:140px;
     color:#FFF;
+    font-family: Quicksand
     
 }
 .modal a{

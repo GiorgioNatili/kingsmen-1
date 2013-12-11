@@ -28,6 +28,11 @@ if (getenv("ENV") == 'production') {
 	$CI->config->set_item('index_page', '');
 }
 
+// project photo path
+
+$config['project_photo_path'] = FCPATH.'photo/project/';
+
+$config['news_photo_path'] = FCPATH.'photo/news/';
 
 // config email server
 $config['email_username'] = 'bigtrouble1212@gmail.com';

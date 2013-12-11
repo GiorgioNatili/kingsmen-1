@@ -7,4 +7,4 @@
 <link type="text/css" rel="stylesheet" href="<?=site_url('css/main.css')?>" />
 <link type="text/css" rel="stylesheet" href="<?=site_url('css/admin/admin.css')?>" />
 <link type="text/css" rel="stylesheet" href="<?=site_url('css/admin/admin_news.css')?>" />
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

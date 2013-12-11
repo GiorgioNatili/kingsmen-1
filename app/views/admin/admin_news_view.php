@@ -1,33 +1,26 @@
 <script type="text/javascript" src="<?=site_url('js/modal.js')?>"></script>
-<script type="text/javascript" src="<?=site_url('js/ajaxUpload.js')?>"></script>
+<script type="text/javascript" src="<?=site_url('js/upload.js')?>"></script>
+<script type="text/javascript" src="<?=site_url('js/submit.js')?>"></script>
+<script type="text/javascript" src="<?=site_url('js/validate.js')?>"></script>
 <script type="text/javascript">
 $(function(){
 
-	// add news
-	$('#my_form').submit(function(){
-								   
-		var news_title = $('#nti').val();
-		var news_detail = $('#nde').val();
 
-		
-		$.post('<?= site_url('admin/admin_news/processform') ?>', 
-			 {	news_title: news_title,
-				news_detail: news_detail,	
-			},
-		function(i){
-			if(i.insert == 'success'){
-				$.modal('insert success');
-			}
-			else
-			{
-				$.modal('fail to insert');
-			}
-		}, 'json');		
-		return false;
+	$('#my_form').ajaxSubmit({
+		url:'<?= site_url("admin/admin_news/processform") ?>',
+		onSubmit:function(){
+			if(!$('#nti').validate({required:true})){ return false;};
+			if(!$('#nde').validate({required:true})){ return false;};
+		},
+		onSuccess:function(i){
+			$.modal('submit success');
+			// $("#my_form")[0].reset();	
+		},
 	});
 
 	// upload image
 	
+					
 		var	listitem = 	'<li>'+
 							'<div class="progressor"></div>'+
 							'<div class="progress-bar-container">'+
@@ -37,8 +30,8 @@ $(function(){
 							'<a class="cancel"></a>'+
 						'</li>';
 					
-		$('#file-upload').ajaxUpload({
-			url:'<?= site_url("admin/admin_news/uploadx") ?>',
+		$('#file-upload').upload({
+			url:'<?= site_url("admin/admin_news/upload")?>',
 			fileList: '#files',
 			listItem: listitem,
 			progressor: '.progressor',
@@ -46,41 +39,10 @@ $(function(){
 			cancelButton: '.cancel',
 			minWidth: 110,
 			minHeight: 86,
-			maxSize: 10000,
-			maxLength: 12,
-			allowedType: 'jpg|png|jpeg|gif',
-			onDimensionError: function(name, width, height){
-				$.modal('File <span style="color:red">'+name+'</span> dimension is too small');
-			},
-			onLengthError: function(current_length){
-				$.modal('Maximum upload limit is 12');
-			},
-			onSizeError: function(name){
-				$.modal('File <span style="color:red">'+name+'</span> size is too big. Max is 10MB');
-			},
-			onTypeError: function(name){
-				$.modal('File <span style="color:red">'+name+'</span> is not an image');
-			},
-			onSubmit: function(name, size, index){
-				$('li').eq(index).append('<span class="oriname" title="'+name+'">'+name+'</span>');
-			},
-			onProgress: function(name, size, index, loaded, progress){
-			
-			},
-			onCancel: function(name, size, index, loaded, progress){
-				$('li').eq(index).fadeSlideWayRemove(120,120);
-			},
+			maxSize: 100000,
+			maxLength: 100,
 			onComplete: function(name, size, index, response){
-				
-				var i = response;
-				if(i.status=='success'){
-					$('li').eq(index).prepend('<img src="'+ i.thumb_name+'" /><br>');
-					$('li').eq(index).append('<a class="del" thumb="'+i.thumb_name+'" imageid="'+i.image_id+'" title="remove image"></a>');
-					$('li').eq(index).find('.progress-bar-container').hide();
-				}else{
-					$('li').eq(index).remove();
-					$.modal(i.error);	
-				}
+
 			}
 		});
 	
@@ -90,8 +52,8 @@ $(function(){
 
 	<br class="br" />
 	<h2 class="line">Add News</h2>
-	<p style="color:#999; font-size:11px; margin-bottom:15px">Complete the form first, then begin to upload images. Click finish when done.
-	<form method="post" id="my_form" action="<?=site_url('admin/admin_news/processform')?>">
+	<p style="color:#999; font-size:11px; margin-bottom:15px">Complete the form first, then begin to upload images.
+	<form method="post" id="my_form">
 		<ul id="error"></ul>
 		<div class="pr">
 			<table>
@@ -121,4 +83,3 @@ $(function(){
 	<ul id="files"></ul>
 
 	<br /><br /><br />
-	<a href="#" id="finish_button">Finish</a>

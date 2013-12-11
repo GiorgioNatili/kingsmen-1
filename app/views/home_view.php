@@ -50,7 +50,7 @@
 			
 		 <!-- TEXTS -->
 			<div id="bannerscollection_zoominout_photoText1" class="bannerscollection_zoominout_texts">
-					<div class="bannerscollection_zoominout_text_line textElement11_opportuneFullScreen" data-initial-left="130" data-initial-top="350" data-final-left="600" data-final-top="350" data-duration="0.5" data-fade-start="0" data-delay="0">Interiors, <br> Exhibitions & Events</div>
+					<div class="bannerscollection_zoominout_text_line textElement11_opportuneFullScreen" data-initial-left="130" data-initial-top="350" data-final-left="700" data-final-top="350" data-duration="0.5" data-fade-start="0" data-delay="0">Interiors, <br> Exhibitions & Events</div>
 		 	</div>       
 		 
 			<div id="bannerscollection_zoominout_photoText3" class="bannerscollection_zoominout_texts">
@@ -59,7 +59,7 @@
 			</div>  
 
 			<div id="bannerscollection_zoominout_photoText2" class="bannerscollection_zoominout_texts">
-					<div class="bannerscollection_zoominout_text_line textElement21_opportuneFullScreen" data-initial-left="1000" data-initial-top="0" data-final-left="1000" data-final-top="460" data-duration="0.5" data-fade-start="0" data-delay="0">Distintive Events <br />& Exhibitions</div>
+					<div class="bannerscollection_zoominout_text_line textElement21_opportuneFullScreen" data-initial-left="1000" data-initial-top="0" data-final-left="1000" data-final-top="460" data-duration="0.5" data-fade-start="0" data-delay="0">Distinctive Events <br />& Exhibitions</div>
 					<div class="bannerscollection_zoominout_text_line textElement22_opportuneFullScreen" data-initial-left="1000" data-initial-top="900" data-final-left="1000" data-final-top="610" data-duration="0.5" data-fade-start="0" data-delay="0.3"> We create exciting exhibitions and events <br /> that connect brands with people</div>
 			</div>
  

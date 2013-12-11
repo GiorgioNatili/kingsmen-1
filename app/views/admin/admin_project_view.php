@@ -1,45 +1,39 @@
 <script type="text/javascript" src="<?=site_url('js/modal.js')?>"></script>
 <script type="text/javascript" src="<?=site_url('js/upload.js')?>"></script>
+<script type="text/javascript" src="<?=site_url('js/submit.js')?>"></script>
+<script type="text/javascript" src="<?=site_url('js/validate.js')?>"></script>
 <script type="text/javascript">
 $(function(){
 
-	// add news
-	$('#my_form').submit(function(){
-								   
-		var name = $('#nti').val();
-		var type = $('#nde').val();
-		var location= $('#lc').val();
 
-		
-		$.post('<?= site_url('admin/admin_project/processform') ?>', 
-			 {	name: name,
-				type: type,
-				location:location
-			},
-		function(i){
-			if(i.insert == 'success'){
-				$.modal('insert success');
-			}
-			else
-			{
-				$.modal('fail to insert');
-			}
-		}, 'json');		
-		return false;
+	$('#my_form').ajaxSubmit({
+		url:'<?= site_url("admin/admin_project/processform") ?>',
+		onSubmit:function(){
+			if(!$('#nti').validate({required:true})){ return false;};
+			if(!$('#plc').validate({required:true})){ return false;};
+		},
+		onSuccess:function(i){
+			$.modal('submit succes');
+		},
+		onError:function(i){
+		}
 	});
+
+
 
 	// upload image
 	
 		var	listitem = 	'<li>'+
+							'<span class=name></span>'+
 							'<div class="progressor"></div>'+
 							'<div class="progress-bar-container">'+
 								'<div class="progress-bar">'+
 								'</div>'+
 							'</div>'+
-							'<a class="cancel"></a>'+
+							'<a class="cancel">cancel</a>'+
 						'</li>';
 					
-		$('#file-upload').ajaxUpload({
+		$('#file-upload').upload({
 			url:'<?= site_url("admin/admin_project/uploadx")?>',
 			fileList: '#files',
 			listItem: listitem,
@@ -50,10 +44,44 @@ $(function(){
 			minHeight: 86,
 			maxSize: 100000,
 			maxLength: 100,
+			onSubmit: function(name, size, index){
+				$('#files').children().last().find('.name').text(name);
+			},
 			onComplete: function(name, size, index, response){
+				if(response.status=='success'){
+					$('#files li').eq(index).append('<a class="set" thumb="'+response.thumb+'" imageid="'+response.image_id+'" title="delete">set as default</a>');
+					$('#files li').eq(index).append('<a class="del" thumb="'+response.thumb+'" imageid="'+response.image_id+'" title="delete">delete</a>');
 
+
+				}
 			}
 		});
+
+
+		$('#files').on('click','.del',function(e){
+			var imageid = $(e.target).attr('imageid');
+			var thumb= $(e.target).attr('thumb');
+			$(e.target).ajaxSubmit({
+				url: '<?= site_url('admin/admin_project/del') ?>',
+				data:{'id':imageid, 'thumb':thumb},
+				onSubmit:function(){},
+				onSuccess:function(i){$(e.target).parent().hide();},
+				onError:function(i){}
+			});
+		});
+
+		$('#files').on('click','.set',function(e){
+			var imageid = $(e.target).attr('imageid');
+			var thumb= $(e.target).attr('thumb');
+			$(e.target).ajaxSubmit({
+				url: '<?= site_url('admin/admin_project/set') ?>',
+				data:{'id':imageid, 'thumb':thumb},
+				onSubmit:function(){},
+				onSuccess:function(i){ $(e.target).empty().text('done')},
+				onError:function(i){}
+			});
+		});
+
 	
 
 });

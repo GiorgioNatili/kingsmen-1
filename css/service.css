@@ -24,3 +24,20 @@
 	font-size: 11px
 }
 
+/*this line is for latest project*/
+
+.album {
+	color: #FFFFFF;
+    font-family: 'Quicksand',Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 20px;
+}
+.threedot {
+	background: url(../img/threedot.png) no-repeat;
+	width: 60px;
+	height: 16px;
+	display: block;
+	margin: 20px 0 0 20px;
+}

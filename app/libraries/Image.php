@@ -84,6 +84,28 @@ class Image {
 			copy($path.$name, $path.$new_name);
 		}
 	}
+	function resize($target_width, $target_height, $path, $name, $new_name){
+
+		$info= getimagesize($path.$name);
+		$width = $info[0];
+		$height = $info[1];
+		$type = substr(image_type_to_extension($info[2]),1);
+				
+		if($type == 'jpg' || $type == 'jpeg'){$image = imagecreatefromjpeg($path.$name);}
+		elseif($type=='gif'){$image = imagecreatefromgif($path.$name);}
+		elseif($type=='png'){$image = imagecreatefrompng($path.$name);}
+		
+		$temp = imagecreatetruecolor($target_width, $target_height);
+		imagealphablending($temp, false);
+		imagesavealpha($temp, true);
+
+		imagecopyresampled($temp, $image, 0, 0, 0, 0, $target_width, $target_height, $width, $height);
+		
+		if($type == 'jpg' || $type == 'jpeg'){imagejpeg($temp, $path.$new_name, 100);}
+		elseif($type=='gif'){imagegif($temp, $path.$new_name);}
+		elseif($type=='png'){imagepng($temp, $path.$new_name, 0);}
+	
+	}
 	function crop($wished_width, $wished_height, $path, $name, $new_name)
 	{
 		$info= getimagesize($path.$name);

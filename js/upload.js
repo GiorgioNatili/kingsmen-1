@@ -1,5 +1,5 @@
 (function($){
-	$.fn.ajaxUpload = function(options){
+	$.fn.upload = function(options){
 		
 		var	html = '<li>'+
 						'<div class="progressor"></div>'+
@@ -76,10 +76,10 @@
 						//update progress bar to 100% in firefox
 						//update progress number to display in the view
 						progress = bar[0].style.width = 100 + "%";
-						bar.hide();
 					}
 					if(progressor.length){
-						progressor.text(progress).hide();
+						// progressor.text(progress).hide();
+						progressor.text(progress);
 					}
 					if(cancel.length){
 						cancel.hide();

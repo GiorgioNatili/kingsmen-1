@@ -9,31 +9,22 @@
 <meta charset="utf-8">
 
 <script type="text/javascript" src="<?=site_url('js/fitSize.js')?>"></script>
+<script type="text/javascript" src="<?=site_url('js/preloadImage.js')?>"></script>
 <script type="text/javascript">
 $(function(){
 // 	$('.showing').fitSize({target:'.mainImg'});
 
 	$('.thumbNav img').click(function(){
 		var src = $(this).attr('src');
-		$('.mainImg img').attr('src', src.replace('d3','d1'));
+		$('.mainImg img').attr('src', src.replace('small','full'));
 	});
 
-	// preload image
-	setTimeout(preload,80000);
-	function preload(){
-		var ar = {};
-		$('img').each(function(){
-			ar[this.src.replace('d3','d1')] = this.src.replace('d3','d1');
-		});
-		$.each(ar,function(i,v){
-			$('<img/>')[0].src = i;
-		});
-	}
+	$('.thumbNav img').each(function(){
+		var url = $(this).attr('src').replace('small','full');
+		preloadImage(url);
+	})
 
 });
-
-
-
 
 </script>
 </head>
@@ -44,10 +35,10 @@ $(function(){
 <span class="sp1"><?=$query->row()->type?></span>
 </a>
 <span class="thered"></span>
-<div class="mainImg"><img class="showing" src="<?=site_url('photo/pro/'.$query->row()->full)?>"></div>
+<div class="mainImg"><img class="showing" src="<?=site_url('photo/project/'.$query->row()->full)?>"></div>
 <div class="thumbNav">
 	<?php foreach($query->result() as $row):?>
-			<span><img id="" src="<?=site_url('photo/pro/'.$row->small)?>"></span>
+			<span><img id="" src="<?=site_url('photo/project/'.$row->small)?>"></span>
 	<?php endforeach;?>
 </div>
 </body>

@@ -23,7 +23,6 @@
 From sophisticated yet functional design, experiential retail environments, contemporary exhibitions and distinctive events, to the latest integrated communications solutions…<br>
 Let us redefine your brand experience.</p>
 <h3>Kingsmen Vietnam</h3>
-<p>Is a part of dynamic Kingsmen group. Vietnam office was found in 1992, working in three related principles &ndash; exhibition, event and interior. With offices in Hanoi and Ho Chi Minh city, supported by more than two hundred professional staffs. Covering every aspects from design to production and operation.<br>
-Kingsmen Vietnam ensures the top quality of every single steps of a project. Not only did we strive to archive perfection of end result but also we crave for the superior customer service that clients could only in few place in business. That is what make Kingsmen Vietnam stand-out. We have plenty of works to speak for that.<br>
-Let us amaze you.</p>
+<p>As a part of dynamic Kingsmen group. Vietnam office was found in 1992, working in three related principles &ndash; exhibition, event and interior. With offices in Hanoi and Ho Chi Minh city, supported by more than two hundred professional staffs. Covering all aspects from design to production and operation.<br>
+Kingsmen Vietnam ensures the top quality of every single step of a project. Not only did we strive to archive perfection of end result but also we crave for the superior customer service that clients always seek for.<br> Let us amaze you.</p>
 

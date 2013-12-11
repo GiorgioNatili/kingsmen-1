@@ -11,10 +11,13 @@
 			var val = $this.val();
 			if(o.required==true && val==''){
 				if(o.highlight.length){$this.addClass(o.highlight);}
+				
 				return false;
 			}else if(o.minChar>0 && val.length < o.minChar ){
+				
 				return false;
 			}else if(o.maxChar>0 && val.length >o.maxChar ){
+
 				return false;	
 			}else{return true;}
 			

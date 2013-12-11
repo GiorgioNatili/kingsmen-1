@@ -9,7 +9,7 @@ class Service extends CI_Controller {
 	{
 		$data['page'] = 'INTERIOR';
 		$type = $this->uri->segment(2);
-		$data['query'] = $this->db->query("SELECT a.*, b.medium FROM project a 
+		$data['query'] = $this->db->query("SELECT a.*, b.thumb FROM project a 
 											LEFT JOIN project_photo b 
 											ON b.project_id = a.id 
 											AND b.main = 1
@@ -25,7 +25,7 @@ class Service extends CI_Controller {
 	{
 		$data['page'] = 'EXHBITIION';
 		$type = $this->uri->segment(2);
-		$data['query'] = $this->db->query("SELECT a.*, b.medium FROM project a 
+		$data['query'] = $this->db->query("SELECT a.*, b.thumb FROM project a 
 											LEFT JOIN project_photo b 
 											ON b.project_id = a.id 
 											AND b.main = 1
@@ -41,7 +41,7 @@ class Service extends CI_Controller {
 	{
 		$data['page'] = 'EVENT';
 		$type = $this->uri->segment(2);
-		$data['query'] = $this->db->query("SELECT a.*, b.medium FROM project a 
+		$data['query'] = $this->db->query("SELECT a.*, b.thumb FROM project a 
 											LEFT JOIN project_photo b 
 											ON b.project_id = a.id 
 											AND b.main = 1
